@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
+             x:Class="MauiAppTestesProjete2.QrCodePage"
+             Title="QrCodePage" 
+             Background="White">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PrimaryColor">#3498db</Color>
+            <Color x:Key="SecondaryColor">#e74c3c</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label 
+                Text="..."
+                TextColor="Black"
+                HorizontalOptions="Center"
+                x:Name="barcodeResult" FontSize="20"/>
+
+            <Label
+                Text="Tempo Gasto"
+                TextColor="Black"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                HorizontalOptions="Center"
+                x:Name="TempoGasto"
+                IsVisible="false"/>
+
+            <Label
+                Text="Tempo Real"
+                TextColor="Black"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                HorizontalOptions="Center"
+                x:Name="TempoReal"
+                IsVisible="false"/>
+
+            <cv:CameraView x:Name="cameraView" WidthRequest="500" HeightRequest="300"
+                           CamerasLoaded="cameraView_CamerasLoaded" BarCodeDetectionEnabled="True"
+                           BarcodeDetected="cameraView_BarcodeDetected"/>
+            <Button
+                x:Name="FinishButton"
+                Text="Finalizar"
+                BackgroundColor="{StaticResource PrimaryColor}"
+                TextColor="White"
+                Clicked="OnFinishButtonClicked"
+                HorizontalOptions="FillAndExpand"
+                WidthRequest="100"
+                CornerRadius="15"
+                IsVisible="false"/>
+            <Button
+                x:Name="ErrorButton"
+                Text="Reportar Defeito"
+                BackgroundColor="{StaticResource SecondaryColor}"
+                TextColor="White"
+                Clicked="OnErrorButtonClicked"
+                HorizontalOptions="FillAndExpand"
+                WidthRequest="150"
+                CornerRadius="15"
+                IsVisible="false"/>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

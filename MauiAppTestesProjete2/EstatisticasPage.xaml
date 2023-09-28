@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:micro="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
+             x:Class="MauiAppTestesProjete2.EstatisticasPage"
+             Title="EstatisticasPage"
+             Background="White">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label
+                Text="Média de Produtos por Hora"
+                FontSize="25"
+                HorizontalOptions="Center"/>
+            <micro:ChartView x:Name="chartView" HeightRequest="500" />
+            
+            <Label
+                Text="Fernando"
+                FontSize="25"
+                HorizontalOptions="Center"/>
+            <micro:ChartView x:Name="chartViewFernando" HeightRequest="500" />
+            
+            <Label
+                Text="Teles"
+                FontSize="25"
+                HorizontalOptions="Center"/>
+            <micro:ChartView x:Name="chartViewTeles" HeightRequest="500" />
+            
+            <Label
+                Text="Luiz"
+                FontSize="25"
+                HorizontalOptions="Center"/>
+            <micro:ChartView x:Name="chartViewLuiz" HeightRequest="500" />
+            
+            <Label
+                Text="João"
+                FontSize="25"
+                HorizontalOptions="Center"/>
+            <micro:ChartView x:Name="chartViewJoao" HeightRequest="500" />
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

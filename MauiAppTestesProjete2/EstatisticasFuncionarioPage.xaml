@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:micro="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
+             x:Class="MauiAppTestesProjete2.EstatisticasFuncionarioPage"
+             Title="EstatisticasFuncionarioPage"
+             Background="White">
+    
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label
+                Text="Tempo Gasto por Produto"
+                FontSize="25"
+                HorizontalOptions="Center"/>
+            <micro:ChartView x:Name="chartView" HeightRequest="500" />
+            
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>
